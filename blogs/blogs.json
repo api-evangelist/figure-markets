@@ -1,0 +1,14 @@
+{
+  "repo": "figure-markets",
+  "feeds": [
+    {
+      "source": "https://www.figuremarkets.com/disclosures/",
+      "feed_url": "https://www.figuremarkets.com/disclosures/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

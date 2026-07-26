@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: live probe of /.well-known/ on figuremarkets.com and api.figuremarkets.com
+note: >-
+  No /.well-known/ discovery documents are published. The public marketing host returns a
+  404 (application/problem+json) for every probed path; the API host (api.figuremarkets.com)
+  is access-controlled and returns 401 for all paths. No documents were saved. Recorded for
+  auditability; re-probe on future runs.
+hosts:
+- host: https://figuremarkets.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/problem+json
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: application/problem+json
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: application/problem+json
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: application/problem+json
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: application/problem+json
+- host: https://api.figuremarkets.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 401
+  - path: /.well-known/openid-configuration
+    status: 401
+  - path: /.well-known/oauth-authorization-server
+    status: 401

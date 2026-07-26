@@ -1,8 +1,16 @@
 aid: figure-markets
 name: Figure Markets
-description: 'Figure Markets is a company surfaced as a portfolio company of dcm-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: fintech. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Figure Markets is a blockchain-native digital-asset marketplace built on the Provenance
+  Blockchain that lets individuals and institutions trade, borrow against, and earn yield on
+  crypto and real-world assets from a single account. Its exchange runs on Connamara's EP3
+  matching engine with FIX and REST APIs, offering a central limit order book for crypto (BTC,
+  ETH, and more), equities, bonds, alternative assets, and YLDS, the first SEC-registered
+  yielding stablecoin. Products include Figure Exchange (pro trading), crypto-backed loans,
+  Democratized Prime (HELOC-backed yield), and self-custodied wallets, bridging traditional
+  order-book finance with on-chain clearing and settlement. The company is backed by DCM
+  Ventures. The trading API is served from api.figuremarkets.com and is access-controlled;
+  no public OpenAPI is currently published.
 url: https://raw.githubusercontent.com/api-evangelist/figure-markets/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,13 +18,49 @@ x-backed-by:
 - dcm-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://www.datocms-assets.com/33246/1775661796-markets-logo-512.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Fintech
-apis: []
+- Cryptocurrency
+- Digital Assets
+- Exchange
+- Trading
+- Blockchain
+- Lending
+- Stablecoin
+- Provenance Blockchain
+apis:
+- name: Figure Markets Exchange API
+  description: >-
+    Access-controlled trading API for the Figure Markets exchange (EP3 matching engine on
+    Provenance Blockchain) covering markets, trading, and account operations. Requires
+    authentication; no public OpenAPI is currently published.
+  humanURL: https://www.figuremarkets.com/exchange/trade/
+  baseURL: https://api.figuremarkets.com
+  tags:
+  - Trading
+  - Exchange
+  - Cryptocurrency
+  properties:
+  - type: DomainSecurity
+    url: security/figure-markets-domain-security.yml
+  - type: Conformance
+    url: conformance/figure-markets-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -24,4 +68,27 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://figuremarkets.com/
+  url: https://www.figuremarkets.com/
+- type: SignUp
+  url: https://www.figuremarkets.com/c/signup/personal
+- type: Login
+  url: https://www.figuremarkets.com/c/login
+- type: Pricing
+  url: https://www.figuremarkets.com/exchange/fees/
+- type: TermsOfService
+  url: https://www.figuremarkets.com/disclosures/
+- type: Blog
+  url: https://www.figure.com/blog/tag/crypto/
+- type: GitHubOrganization
+  url: https://github.com/figuremarkets
+- type: LLMsTxt
+  url: llms/figure-markets-llms.txt
+- type: DomainSecurity
+  url: security/figure-markets-domain-security.yml
+- type: Conformance
+  url: conformance/figure-markets-conformance.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

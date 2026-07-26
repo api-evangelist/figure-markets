@@ -1,0 +1,29 @@
+generated: '2026-07-19'
+method: derived
+source: >-
+  live HTTP probes of figuremarkets.com / api.figuremarkets.com error envelopes and public
+  product/technology documentation (Connamara EP3 case study). No public OpenAPI is available
+  to derive from.
+standards:
+- id: rfc9457-problem-details
+  conforms: true
+  evidence: >-
+    Backend error responses are served as application/problem+json with type/title/status/detail/
+    instance members (observed on figuremarkets.com apex and .well-known paths).
+- id: fix-protocol
+  conforms: true
+  evidence: >-
+    Exchange runs on Connamara EP3, which exposes a FIX API for order entry/market data
+    (per Connamara case study).
+- id: oauth2
+  conforms: false
+  evidence: No public OpenAPI or OAuth discovery document; api.figuremarkets.com returns 401 for all probed paths.
+- id: openid-connect
+  conforms: false
+  evidence: /.well-known/openid-configuration returns 404 (apex) / 401 (api host).
+- id: fapi
+  conforms: false
+  evidence: No published security profile.
+- id: json-api
+  conforms: false
+  evidence: Not asserted; no public spec.
