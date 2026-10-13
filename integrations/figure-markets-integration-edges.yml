@@ -9,7 +9,7 @@ edges:
   evidence: https://api.coingecko.com/api/v3/exchanges/figure_markets
   matched_by: domain:figuremarkets.com
   coingecko_id: figure_markets
-  trust_score: 4
+  trust_score: 3
   detected_by: sweep-crypto.py
   first_seen: '2026-10-13'
 generated: '2026-10-13'
